@@ -1,1 +1,1 @@
-﻿Console.WriteLine("Hello, World!");
+﻿Playground.Experiments.Day01_Returns.Run();

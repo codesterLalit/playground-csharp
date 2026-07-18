@@ -1,1 +1,1 @@
-﻿Playground.Experiments.Day02_Volatility.Run();
+﻿Playground.Experiments.Day03_Sharpe.Run();

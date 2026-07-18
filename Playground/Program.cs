@@ -1,1 +1,1 @@
-﻿Playground.Experiments.Day01_Returns.Run();
+﻿Playground.Experiments.Day02_Volatility.Run();

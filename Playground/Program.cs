@@ -1,1 +1,1 @@
-﻿Playground.Experiments.Day04_MaxDrawdown.Run();
+﻿Playground.Experiments.Day05_VaR.Run();

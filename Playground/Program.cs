@@ -1,1 +1,1 @@
-﻿Playground.Experiments.Day03_Sharpe.Run();
+﻿Playground.Experiments.Day05_VaR.Run();

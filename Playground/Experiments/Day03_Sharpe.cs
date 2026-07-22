@@ -16,8 +16,8 @@ public static class Day03_Sharpe
 
     public static void Run()
     {
-        double[] returns = { 0.02, -0.01, 0.03, -0.02 };
-        double riskFreeRate = 0.04;
+        double[] returns = { 100, 102, 101, 105, 103 };
+        double riskFreeRate = 0.02;
 
         double annualReturn = AnnualisedReturn(returns);
         double sharpe = SharpeRatio(returns, riskFreeRate);

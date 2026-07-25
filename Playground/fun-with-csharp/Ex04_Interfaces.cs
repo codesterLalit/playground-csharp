@@ -15,6 +15,8 @@ public class Circle: IShape
     public double Perimeter() => 2 * Math.PI * Radius;
 }
 
+public interface INamed { string Name {get;}}
+
 public class Rectangle: IShape
 {
     public double Width {get; init;}
@@ -27,7 +29,7 @@ public static class FunWithInterface
 {
     public static void Run()
     {
-        List<IShape> shapes = new() {new Circle{Radius = 2}, new Rectangle {Width=3, Height = 4}};
+        List<IShape> shapes = new() {new Circle{Radius = 2}, new Rectangle{Width = 22, Height= 11}};
 
         foreach (var s in shapes)
         {

@@ -17,6 +17,6 @@ public static class Ex02_WithExpressions
 
         // original.Author = "Lalit"; // not able to change because we are immutable
         var thirdRecord = new MutableBook("Mutablebook", "Hero") {Year = 1990};
-        thirdRecord.Year = 2002;
+        thirdRecord.Year = 2002; // able to change because it was use as get; set; instead of direct record.
     }
 }

@@ -1,2 +1,2 @@
 ﻿// Playground.Experiments.Day05_VaR.Run();
-Play.fun.FunWithInterface.Run();
+Play.fun.EX05.Run();

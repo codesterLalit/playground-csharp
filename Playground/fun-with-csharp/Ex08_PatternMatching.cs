@@ -14,7 +14,8 @@ public static class Ex08_PatternMatching
         double result = s switch
         {
           Circle3 circ => Math.PI * circ.Radius * circ.Radius,
-          Rectangle3 rect => rect.Width * rect.Height
+          Rectangle3 rect => rect.Width * rect.Height,
+          null => throw new ArgumentNullException(nameof(s))
         };
         return result;
     }

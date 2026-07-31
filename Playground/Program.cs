@@ -1,2 +1,2 @@
 ﻿// Playground.Experiments.Day05_VaR.Run();
-Play.fun.Ex09_StructMutability.Run();
+Play.fun.Ex10_Capstone.Run();

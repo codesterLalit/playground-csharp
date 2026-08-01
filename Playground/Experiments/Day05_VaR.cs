@@ -22,7 +22,7 @@ namespace Playground.Experiments
 
         public static void Run()
         {
-            double[] returns = {0.01, -0.02, 0.03, -0.05, 0.02, -0.01, 0.015, -0.03, 0.005, -0.008};
+            double[] returns = {0.01, -0.02, 0.03, -0.05, 0.02, -0.01, 0.015, -0.03, 0.005, -0.008, -0.88};
 
             double var95 = HistoricalVaR95(returns);
             Console.WriteLine($"Historical VaR (95%): {var95}");

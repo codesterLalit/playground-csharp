@@ -25,6 +25,6 @@ public static class All_things
           changed
         };
         var total = TotalValue(trades);
-        Console.WriteLine($"Total value: {total}");
+        Console.WriteLine($"Total value is {total}");
     }
 }

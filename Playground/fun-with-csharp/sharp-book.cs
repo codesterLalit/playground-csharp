@@ -30,7 +30,7 @@ public static class Ex01_Records
 
         var bookClass1 = new BookClass
         {
-            Title = "GOT", 
+            Title = "Game of thrones", 
             Author = "George R. Martin", 
             Year = 1990
         };

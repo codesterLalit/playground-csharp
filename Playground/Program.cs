@@ -1,2 +1,2 @@
 ﻿// Playground.Experiments.Day05_VaR.Run();
-Play.fun.Ex11_Enumerable.Run();
+Play.fun.Ex14_CollectionInterfaces.Run();

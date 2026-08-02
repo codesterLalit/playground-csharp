@@ -10,17 +10,21 @@ public record Product(string Sku, int Score): IHasScore;
 
 public static class Ex15_GenericConstraints
 {
-    public static T Highest<T>(IEnumerable<T> items) where T: IHasScore{
-        int highestScore = int.MinValue;
+    public static T Highest<T>(IEnumerable<T> items) where T: IHasScore
+    {
+        T? best = default;
+        int bestScore = int.MinValue;
 
         foreach(var item in items)
         {
-            if(item.Score > highestScore)
+            if(item.Score > bestScore)
             {
-                highestScore = item.Score;
+                bestScore = item.Score;
+                best = item;
+
             }
         }
-        return items.First(i => i.Score == highestScore);
+        return best ?? throw new InvalidOperationException("No items provided");
     }
 
     public static void Run()

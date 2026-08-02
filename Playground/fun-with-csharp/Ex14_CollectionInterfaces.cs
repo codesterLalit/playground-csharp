@@ -17,14 +17,18 @@ public static class Ex14_CollectionInterfaces
 
     public static string TopScorer(IReadOnlyDictionary<string, int> scores)
     {
-        foreach(var score in scores)
+        string topName = string.Empty;
+        int topScore = int.MinValue;
+
+        foreach(var (name, score) in scores)
         {
-            if(score.Value == scores.Values.Max())
+            if(score > topScore)
             {
-                return score.Key;
+                topScore = score;
+                topName = name;
             }
         }
-        return string.Empty;
+        return topName;
     }
 
     public static void Run()

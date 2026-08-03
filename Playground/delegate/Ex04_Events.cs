@@ -37,5 +37,6 @@ public static class Ex04_Events
 
         ticker.Price = 95m;
         ticker.Price = 120m;
+        
     }
 }

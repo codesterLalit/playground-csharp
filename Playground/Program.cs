@@ -1,2 +1,3 @@
 ﻿// Playground.Experiments.Day05_VaR.Run();
-Play.fun.Ex15_GenericConstraints.Run();
+// Play.fun.Ex15_GenericConstraints.Run();
+Play.delegates.Ex01_BasicDelegatess.Run();

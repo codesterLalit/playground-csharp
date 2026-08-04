@@ -19,7 +19,10 @@ public static class Ex02_FilterProject
         Console.WriteLine($"{string.Join(",", names)}");
         
         // Todo 2:
-        products.Where(p=> true)
-        .Select(p=> Console.WriteLine(p.Name));
+        products
+        .Where(p => true)
+        .Select(p => p.Name)
+        .ToList()
+        .ForEach(Console.WriteLine);
     }
 }

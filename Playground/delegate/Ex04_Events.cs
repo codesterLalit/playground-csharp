@@ -22,6 +22,7 @@ public static class Ex04_Events
     public static void Run()
     {
         var ticker = new PriceTicker();
+        
         ticker.PriceChanged += (sender, price) =>
         {
             Console.WriteLine($"Price: {price}");
@@ -37,6 +38,6 @@ public static class Ex04_Events
 
         ticker.Price = 95m;
         ticker.Price = 120m;
-        
+
     }
 }

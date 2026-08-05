@@ -40,15 +40,5 @@ public static class Ex03_Ordering
         Console.WriteLine();
 
 
-        // TODO 3: Two separate OrderBy calls
-        Console.WriteLine("=== OrderBy().OrderBy() ===");
-
-        employees
-            .OrderBy(e => e.Department)
-            .OrderBy(e => e.Salary)
-            .ToList()
-            .ForEach(e =>
-                Console.WriteLine($"{e.Department} | {e.Name}: {e.Salary}")
-            );
     }
 }

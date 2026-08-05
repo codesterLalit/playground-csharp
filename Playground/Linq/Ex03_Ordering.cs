@@ -24,5 +24,19 @@ public static class Ex03_Ordering
             .ForEach(e => Console.WriteLine($"{e.Name}: {e.Salary}"));
 
         Console.WriteLine();
+
+
+        // TODO 2: Order by Department ascending, then Salary descending
+        Console.WriteLine("=== Department, then Salary Descending ===");
+
+        employees
+            .OrderBy(e => e.Department)
+            .ThenByDescending(e => e.Salary)
+            .ToList()
+            .ForEach(e =>
+                Console.WriteLine($"{e.Department} | {e.Name}: {e.Salary}")
+            );
+
+        Console.WriteLine();
     }
 }

@@ -16,9 +16,8 @@ public static class Ex02_FilterProject
         };
 
         // Todo 1: 
-        List<string> names = products.Where(p=> true)
-            .Select(p => p.Name).ToList();
-        Console.WriteLine($"{string.Join(",", names)}");
+        List<string> names = products.Where(p => p.Stock > 0)
+    .Select(p => p.Name).ToList();
         
         // Todo 2: Query syntex
         var inStockNamesQuery = from p in products 

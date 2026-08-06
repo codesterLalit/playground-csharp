@@ -15,7 +15,7 @@ public static class Ex04_Aggregation
         };
 
         // TODO 1: total revenue = Sum of (Price * Quantity) across all sales.
-        var totalRevenue = sales.Sum(p=>p.Price);
+        var totalRevenue = sales.Sum(p=>p.Price * p.Quantity);
         Console.WriteLine($"Total Revenue: {totalRevenue}");
 
         // TODO 2: total items sold = Sum of Quantity.
@@ -32,10 +32,16 @@ public static class Ex04_Aggregation
 
 
         // TODO 5: the cheapest whole Sale record (not just its price), using MinBy.
-
+        var cheapestRecord = sales.MinBy(p=> p.Price);
+        Console.WriteLine($"Cheapest whole sale record: {cheapestRecord.Product}: {cheapestRecord.Price}, {cheapestRecord.Quantity}");
+        
         // TODO 6: the most expensive whole Sale record, using MaxBy.
+        var expensiveRecord = sales.MaxBy(p=> p.Price);
+        Console.WriteLine($"expensiveRecord whole sale record: {expensiveRecord.Product}: {expensiveRecord.Price}, {expensiveRecord.Quantity}");
 
         // TODO 7: recompute total revenue from TODO 1, but with Aggregate instead of
         //         Sum, to see Sum is really just a specialized Aggregate.
+        var totalRevenue2 = sales.Aggregate(0m, (sum, p)=> sum+ p.Price * p.Quantity);
+        Console.WriteLine($"total revenue: {totalRevenue2}");
     }
 }

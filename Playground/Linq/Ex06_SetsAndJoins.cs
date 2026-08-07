@@ -56,7 +56,5 @@ public static class Ex06_SetsAndJoins
         {
             Console.WriteLine(value);
         }
-
-
     }
 }

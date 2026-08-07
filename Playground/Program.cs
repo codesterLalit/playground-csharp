@@ -1,3 +1,3 @@
 // Playground.Experiments.Day05_VaR.Run();
 // Play.fun.Ex15_GenericConstraints.Run();
-Play.cleanarch.Ex01_DependencyInversion.Run();
+Play.cleanarch.Ex03_DiContainerBasics.Run();

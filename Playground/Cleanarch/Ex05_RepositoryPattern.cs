@@ -31,8 +31,23 @@ public class InMemoryCustomerRepository: ICustomerRepository
 
 public class CustomerService
 {
-    public CustomerService()
+    private ICustomerRepository _customerRepository;
+    public CustomerService(ICustomerRepository customerRepository)
     {
-        
+        _customerRepository = customerRepository;
+    }
+
+    public void RegisterCustomer(string name, string email)
+    {
+        Random random = new Random();
+        int number = random.Next(1, 9999);
+        var person = new Customer(number, name, email);
+        _customerRepository.Add(person);
+    }
+
+    public Customer FindCustomer(int id)
+    {
+       var customer =  _customerRepository.GetById(id);
+       return customer;
     }
 }

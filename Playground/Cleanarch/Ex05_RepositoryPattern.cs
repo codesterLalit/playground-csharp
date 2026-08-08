@@ -1,3 +1,5 @@
+using Microsoft.Extensions.DependencyInjection;
+
 namespace Play.cleanarch;
 
 public record Customer(int Id, string Name, string Email);
@@ -39,9 +41,9 @@ public class CustomerService
 
     public void RegisterCustomer(string name, string email)
     {
-        Random random = new Random();
-        int number = random.Next(1, 9999);
-        var person = new Customer(number, name, email);
+        // Random random = new Random();
+        // int number = random.Next(1, 9999);
+        var person = new Customer(20, name, email);
         _customerRepository.Add(person);
     }
 
@@ -49,5 +51,23 @@ public class CustomerService
     {
        var customer =  _customerRepository.GetById(id);
        return customer;
+    }
+}
+
+public static class Ex05_RepositoryPattern
+{
+    public static void Run()
+    {
+        var services = new ServiceCollection();
+
+        services.AddSingleton<ICustomerRepository, InMemoryCustomerRepository>();
+        services.AddSingleton<CustomerService>();
+        
+        using var provider = services.BuildServiceProvider();
+        var customerService = provider.GetRequiredService<CustomerService>();
+
+        customerService.RegisterCustomer("Lalit ", "laalit.sunaar@gmail.com");
+        var customer = customerService.FindCustomer(20);
+        Console.WriteLine($"Custom: {customer.Name}");
     }
 }

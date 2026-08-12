@@ -43,8 +43,9 @@ public static class Ex09_TestingWithFakes
         var fake  = new FakeProductRepository();
         var useCase = new FindProductUseCase(fake);
         Result<Product> product = useCase.Execute(new FindProductRequest(1));
-        Console.WriteLine($"IsSuccess: {product.IsSuccess}");
-        if (product.IsSuccess is true)
+        var seeded = new Product(1, "Pen", 20);
+
+        if (product.IsSuccess is true && product.Value.Equals(seeded))
         {
             Console.WriteLine($"Pass");
         } else
@@ -59,12 +60,12 @@ public static class Ex09_TestingWithFakes
         var useCase = new FindProductUseCase(fake);
         Result<Product> product = useCase.Execute(new FindProductRequest(120));
         Console.WriteLine($"IsSuccess: {product.IsSuccess}");
-        if (product.IsSuccess is true)
-        {
-            Console.WriteLine($"Pass");
-        } else
+        if (product.IsSuccess is false && product.Error is not null)
         {
             Console.WriteLine($"Fail: {product.Error}");
+        } else
+        {
+            Console.WriteLine($"Pass");
         }
     }
 }

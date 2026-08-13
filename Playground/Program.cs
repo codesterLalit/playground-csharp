@@ -1,1 +1,1 @@
-Play.cleanarch.Ex14_EfRepository.Run();
+Play.cleanarch.Ex15_DbContextLifetime.Run();
